@@ -44,9 +44,9 @@ create table economy(
     below_poverty_line_percentage >= 0
     and below_poverty_line_percentage <= 100
   ),
-  labor_force_femal_percentage numeric check (
-    labor_force_femal_percentage >= 0
-    and labor_force_femal_percentage <= 100
+  labor_force_female_percentage numeric check (
+    labor_force_female_percentage >= 0
+    and labor_force_female_percentage <= 100
   ),
   consumer_price_index numeric check (
     consumer_price_index >= 0
