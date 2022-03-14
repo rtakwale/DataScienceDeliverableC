@@ -170,3 +170,43 @@ create table education(
     and school_enrollment_tertiary_percentage_net <= 100
   )
 );
+
+create table climate(
+  climate_key serial primary key,
+  longest_drought_in_days integer check (
+    longest_drought_in_days >= 0
+    and longest_drought_in_days <= 366
+  ),
+  longest_consecutive_days_of_rainfall integer check (
+    longest_consecutive_days_of_rainfall >= 0
+    and longest_consecutive_days_of_rainfall <= 366
+  ),
+  longest_length_heat_wave_in_days integer check (
+    longest_length_heat_wave_in_days >= 0
+    and longest_length_heat_wave_in_days <= 366
+  ),
+  longest_length_extreme_cold_in_days integer check (
+    longest_length_extreme_cold_in_days >= 0
+    and longest_length_extreme_cold_in_days <= 366
+  ),
+  annual_rainfall_cm numeric check (
+    annual_rainfall_cm >= 0
+    and annual_rainfall_cm <= 100
+  ),
+  average_humidity_level_percentage numeric check (
+    average_humidity_level_percentage >= 0
+    and average_humidity_level_percentage <= 100
+  ),
+  average_annual_celsius numeric check (
+    average_annual_celsius >= 0
+    and average_annual_celsius <= 100
+  ),
+  max_annual_temperature_celsius numeric check (
+    max_annual_temperature_celsius >= 0
+    and max_annual_temperature_celsius <= 100
+  ),
+  min_annual_temperature_celsius numeric check (
+    min_annual_temperature_celsius >= 0
+    and min_annual_temperature_celsius <= 100
+  )
+);
