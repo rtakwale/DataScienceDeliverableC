@@ -16,8 +16,7 @@ create table economy(
     total_unemployment_percentage >= 0
     and total_unemployment_percentage <= 100
   ),
-  income_share_held_by_highest_10_percent numeric,
-  check (
+  income_share_held_by_highest_10_percent numeric check (
     income_share_held_by_highest_10_percent >= 0
     and income_share_held_by_highest_10_percent <= 100
   ),
