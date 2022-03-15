@@ -86,9 +86,9 @@ create table education(
     literacy_rate_adult_total_percentage >= 0
     and literacy_rate_adult_total_percentage <= 100
   ),
-  literacy_rate_youth_female_percentage numeric check (
-    literacy_rate_youth_female_percentage >= 0
-    and literacy_rate_youth_female_percentage <= 100
+  literacy_rate_youth_total_percentage numeric check (
+    literacy_rate_youth_total_percentage >= 0
+    and literacy_rate_youth_total_percentage <= 100
   ),
   literacy_rate_youth_male_percentage numeric check (
     literacy_rate_youth_male_percentage >= 0
@@ -97,30 +97,6 @@ create table education(
   primary_education_completed_percentage numeric check (
     primary_education_completed_percentage >= 0
     and primary_education_completed_percentage <= 100
-  ),
-  secondary_education_completed_percentage numeric check (
-    secondary_education_completed_percentage >= 0
-    and secondary_education_completed_percentage <= 100
-  ),
-  college_education_completed_percentage numeric check (
-    college_education_completed_percentage >= 0
-    and college_education_completed_percentage <= 100
-  ),
-  apprenticeship_education_completed_percentage numeric check (
-    apprenticeship_education_completed_percentage >= 0
-    and apprenticeship_education_completed_percentage <= 100
-  ),
-  bachelors_education_completed_percentage numeric check (
-    bachelors_education_completed_percentage >= 0
-    and bachelors_education_completed_percentage <= 100
-  ),
-  masters_education_completed_percentage numeric check (
-    masters_education_completed_percentage >= 0
-    and masters_education_completed_percentage <= 100
-  ),
-  doctorate_education_completed_percentage numeric check (
-    doctorate_education_completed_percentage >= 0
-    and doctorate_education_completed_percentage <= 100
   ),
   school_enrollment_primary_percentage_gross numeric check (
     school_enrollment_primary_percentage_gross >= 0
@@ -174,9 +150,9 @@ create table education(
     school_enrollment_tertiary_percentage_gross >= 0
     and school_enrollment_tertiary_percentage_gross <= 100
   ),
-  school_enrollment_tertiary_percentage_net numeric check (
-    school_enrollment_tertiary_percentage_net >= 0
-    and school_enrollment_tertiary_percentage_net <= 100
+  school_enrollment_tertiary_percentage_female_gross numeric check (
+    school_enrollment_tertiary_percentage_female_gross >= 0
+    and school_enrollment_tertiary_percentage_female_gross <= 100
   )
 );
 
