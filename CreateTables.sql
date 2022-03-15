@@ -3,7 +3,7 @@
 create table economy(
   economy_key serial primary key,
   imports_in_usd_millions integer,
-  emports_in_usd_millions integer,
+  exports_in_usd_millions integer,
   female_unemployment_percentage numeric check (
     female_unemployment_percentage >= 0
     and female_unemployment_percentage <= 100
