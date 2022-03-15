@@ -2,8 +2,14 @@
 
 create table economy(
   economy_key serial primary key,
-  imports_in_usd_millions integer,
-  exports_in_usd_millions integer,
+  imports_goods_and_services_usd integer check (
+    imports_goods_and_services_usd >= 0
+    and imports_goods_and_services_usd <= 100000000000000
+  ),
+  exports_goods_and_services_usd integer check (
+    exports_goods_and_services_usd >= 0
+    and exports_goods_and_services_usd <= 100000000000000
+  ),
   female_unemployment_percentage numeric check (
     female_unemployment_percentage >= 0
     and female_unemployment_percentage <= 100
@@ -51,6 +57,10 @@ create table economy(
   consumer_price_index numeric check (
     consumer_price_index >= 0
     and consumer_price_index <= 500
+  ),
+  consumer_price_inflation_percentage numeric check (
+    consumer_price_inflation_percentage >= 0
+    and consumer_price_inflation_percentage <= 1000000
   ),
   labor_force_total integer check (
     labor_force_total >= 0
