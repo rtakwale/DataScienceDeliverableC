@@ -100,7 +100,7 @@ create table education(
   ),
   school_enrollment_primary_percentage_gross numeric check (
     school_enrollment_primary_percentage_gross >= 0
-    and school_enrollment_primary_percentage_gross <= 100
+    and school_enrollment_primary_percentage_gross <= 200
   ),
   school_enrollment_primary_percentage_net numeric check (
     school_enrollment_primary_percentage_net >= 0
@@ -108,7 +108,7 @@ create table education(
   ),
   school_enrollment_primary_percentage_female_gross numeric check (
     school_enrollment_primary_percentage_female_gross >= 0
-    and school_enrollment_primary_percentage_female_gross <= 100
+    and school_enrollment_primary_percentage_female_gross <= 200
   ),
   school_enrollment_primary_percentage_female_net numeric check (
     school_enrollment_primary_percentage_female_net >= 0
@@ -116,7 +116,7 @@ create table education(
   ),
   school_enrollment_primary_percentage_male_gross numeric check (
     school_enrollment_primary_percentage_male_gross >= 0
-    and school_enrollment_primary_percentage_male_gross <= 100
+    and school_enrollment_primary_percentage_male_gross <= 200
   ),
   school_enrollment_primary_percentage_male_net numeric check (
     school_enrollment_primary_percentage_male_net >= 0
@@ -124,7 +124,7 @@ create table education(
   ),
   school_enrollment_secondary_percentage_gross numeric check (
     school_enrollment_secondary_percentage_gross >= 0
-    and school_enrollment_secondary_percentage_gross <= 100
+    and school_enrollment_secondary_percentage_gross <= 200
   ),
   school_enrollment_secondary_percentage_net numeric check (
     school_enrollment_secondary_percentage_net >= 0
@@ -132,7 +132,7 @@ create table education(
   ),
   school_enrollment_secondary_percentage_female_gross numeric check (
     school_enrollment_secondary_percentage_female_gross >= 0
-    and school_enrollment_secondary_percentage_female_gross <= 100
+    and school_enrollment_secondary_percentage_female_gross <= 200
   ),
   school_enrollment_secondary_percentage_female_net numeric check (
     school_enrollment_secondary_percentage_female_net >= 0
@@ -140,7 +140,7 @@ create table education(
   ),
   school_enrollment_secondary_percentage_male_gross numeric check (
     school_enrollment_secondary_percentage_male_gross >= 0
-    and school_enrollment_secondary_percentage_male_gross <= 100
+    and school_enrollment_secondary_percentage_male_gross <= 200
   ),
   school_enrollment_secondary_percentage_male_net numeric check (
     school_enrollment_secondary_percentage_male_net >= 0
@@ -148,11 +148,11 @@ create table education(
   ),
   school_enrollment_tertiary_percentage_gross numeric check (
     school_enrollment_tertiary_percentage_gross >= 0
-    and school_enrollment_tertiary_percentage_gross <= 100
+    and school_enrollment_tertiary_percentage_gross <= 200
   ),
   school_enrollment_tertiary_percentage_female_gross numeric check (
     school_enrollment_tertiary_percentage_female_gross >= 0
-    and school_enrollment_tertiary_percentage_female_gross <= 100
+    and school_enrollment_tertiary_percentage_female_gross <= 200
   )
 );
 
