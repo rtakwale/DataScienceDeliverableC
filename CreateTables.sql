@@ -2,6 +2,11 @@
 
 create table economy(
   economy_key serial primary key,
+  country_code text,
+  yr integer check (
+    yr >= 2005
+    and yr <= 2020
+  ),
   imports_goods_and_services_usd integer check (
     imports_goods_and_services_usd >= 0
     and imports_goods_and_services_usd <= 100000000000000
@@ -70,6 +75,11 @@ create table economy(
 
 create table education(
   education_key serial primary key,
+  country_code text,
+  yr integer check (
+    yr >= 2005
+    and yr <= 2020
+  ),
   public_spending_education_percentage_of_gdp numeric check (
     public_spending_education_percentage_of_gdp >= 0
     and public_spending_education_percentage_of_gdp <= 100
@@ -156,8 +166,15 @@ create table education(
   )
 );
 
+
+// REDO THIS
 create table climate(
   climate_key serial primary key,
+  country_code text,
+  yr integer check (
+    yr >= 2005
+    and yr <= 2020
+  ),
   longest_drought_in_days integer check (
     longest_drought_in_days >= 0
     and longest_drought_in_days <= 366
