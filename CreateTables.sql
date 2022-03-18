@@ -170,8 +170,24 @@ create table education(
   )
 );
 
+average_annual_precipitation_mm
+agricultural_land_percent_of_total
+forest_land_percent_of_total
+terrestrial_and_marine_protected_area_percent
+terrestrial_protected_area_percent
+annual_freshwater_withdrawals_percent_of_total
+droughts_floods_extreme_temp_percent_of_pop
+num_of_bird_species_threatened
+num_of_fish_species_threatened
+num_of_mammal_species_threatened
+mortality_rate_due_to_air_pollution_per_100000_male
+mortality_rate_due_to_air_pollution_per_100000_female
+percent_population_exposed_air_pollution_over_who_guideline
+co2_emissions_kt
+co2_emissions_metric_ton_per_capita
+total_ghg_emissions_kt_of_co2_equivalent
 
-// REDO THIS
+
 create table climate(
   climate_key serial primary key,
   country_code text,
@@ -179,40 +195,68 @@ create table climate(
     yr >= 2005
     and yr <= 2020
   ),
-  longest_drought_in_days integer check (
-    longest_drought_in_days >= 0
-    and longest_drought_in_days <= 366
+  average_annual_precipitation_mm integer check (
+    average_annual_precipitation_mm >= 0
+    and average_annual_precipitation_mm <= 10000
   ),
-  longest_consecutive_days_of_rainfall integer check (
-    longest_consecutive_days_of_rainfall >= 0
-    and longest_consecutive_days_of_rainfall <= 366
+  agricultural_land_percent_of_total numeric check (
+    agricultural_land_percent_of_total >= 0
+    and agricultural_land_percent_of_total <= 100
   ),
-  longest_length_heat_wave_in_days integer check (
-    longest_length_heat_wave_in_days >= 0
-    and longest_length_heat_wave_in_days <= 366
+  forest_land_percent_of_total numeric check (
+    forest_land_percent_of_total >= 0
+    and forest_land_percent_of_total <= 100
   ),
-  longest_length_extreme_cold_in_days integer check (
-    longest_length_extreme_cold_in_days >= 0
-    and longest_length_extreme_cold_in_days <= 366
+  terrestrial_and_marine_protected_area_percent numeric check (
+    terrestrial_and_marine_protected_area_percent >= 0
+    and terrestrial_and_marine_protected_area_percent <= 100
   ),
-  annual_rainfall_cm numeric check (
-    annual_rainfall_cm >= 0
-    and annual_rainfall_cm <= 100
+  terrestrial_protected_area_percent numeric check (
+    terrestrial_protected_area_percent >= 0
+    and terrestrial_protected_area_percent <= 100
   ),
-  average_humidity_level_percentage numeric check (
-    average_humidity_level_percentage >= 0
-    and average_humidity_level_percentage <= 100
+  annual_freshwater_withdrawals_percent_of_total numeric check (
+    annual_freshwater_withdrawals_percent_of_total >= 0
+    and annual_freshwater_withdrawals_percent_of_total <= 100
   ),
-  average_annual_celsius numeric check (
-    average_annual_celsius >= 0
-    and average_annual_celsius <= 100
+  droughts_floods_extreme_temp_percent_of_pop numeric check (
+    droughts_floods_extreme_temp_percent_of_pop >= 0
+    and droughts_floods_extreme_temp_percent_of_pop <= 100
   ),
-  max_annual_temperature_celsius numeric check (
-    max_annual_temperature_celsius >= 0
-    and max_annual_temperature_celsius <= 100
+  num_of_bird_species_threatened integer check (
+    num_of_bird_species_threatened >= 0
+    and num_of_bird_species_threatened <= 1000
   ),
-  min_annual_temperature_celsius numeric check (
-    min_annual_temperature_celsius >= 0
-    and min_annual_temperature_celsius <= 100
+  num_of_fish_species_threatened integer check (
+    num_of_fish_species_threatened >= 0
+    and num_of_fish_species_threatened <= 1000
+  ),
+  num_of_mammal_species_threatened integer check (
+    num_of_mammal_species_threatened >= 0
+    and num_of_mammal_species_threatened <= 1000
+  ),
+  mortality_rate_due_to_air_pollution_per_100000_male numeric check (
+    mortality_rate_due_to_air_pollution_per_100000_male >= 0
+    and mortality_rate_due_to_air_pollution_per_100000_male <= 1000
+  ),
+  mortality_rate_due_to_air_pollution_per_100000_female numeric check (
+    mortality_rate_due_to_air_pollution_per_100000_female >= 0
+    and mortality_rate_due_to_air_pollution_per_100000_female <= 1000
+  ),
+  percent_population_exposed_air_pollution_over_who_guideline numeric check (
+    percent_population_exposed_air_pollution_over_who_guideline >= 0
+    and percent_population_exposed_air_pollution_over_who_guideline <= 100
+  ),
+  co2_emissions_kt bigint check (
+    co2_emissions_kt >= 0
+    and co2_emissions_kt <= 1000000000
+  ),
+  co2_emissions_metric_ton_per_capita numeric check (
+    co2_emissions_metric_ton_per_capita >= 0
+    and co2_emissions_metric_ton_per_capita <= 100
+  ),
+  total_ghg_emissions_kt_of_co2_equivalent bigint check (
+    total_ghg_emissions_kt_of_co2_equivalent >= 0
+    and total_ghg_emissions_kt_of_co2_equivalent <= 1000000000
   )
 );
