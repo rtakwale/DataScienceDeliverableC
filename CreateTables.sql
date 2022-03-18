@@ -68,7 +68,7 @@ create table economy(
     and consumer_price_index <= 500
   ),
   consumer_price_inflation_percentage numeric check (
-    consumer_price_inflation_percentage >= 0
+    consumer_price_inflation_percentage >= -100
     and consumer_price_inflation_percentage <= 1000000
   ),
   labor_force_total integer check (
