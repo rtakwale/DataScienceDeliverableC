@@ -110,7 +110,7 @@ create table education(
   ),
   primary_education_completed_percentage numeric check (
     primary_education_completed_percentage >= 0
-    and primary_education_completed_percentage <= 100
+    and primary_education_completed_percentage <= 200
   ),
   school_enrollment_primary_percentage_gross numeric check (
     school_enrollment_primary_percentage_gross >= 0
