@@ -7,11 +7,11 @@ create table economy(
     yr >= 2005
     and yr <= 2020
   ),
-  imports_goods_and_services_usd integer check (
+  imports_goods_and_services_usd bigint check (
     imports_goods_and_services_usd >= 0
     and imports_goods_and_services_usd <= 100000000000000
   ),
-  exports_goods_and_services_usd integer check (
+  exports_goods_and_services_usd bigint check (
     exports_goods_and_services_usd >= 0
     and exports_goods_and_services_usd <= 100000000000000
   ),
