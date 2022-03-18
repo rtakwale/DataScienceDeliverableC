@@ -170,24 +170,6 @@ create table education(
   )
 );
 
-average_annual_precipitation_mm
-agricultural_land_percent_of_total
-forest_land_percent_of_total
-terrestrial_and_marine_protected_area_percent
-terrestrial_protected_area_percent
-annual_freshwater_withdrawals_percent_of_total
-droughts_floods_extreme_temp_percent_of_pop
-num_of_bird_species_threatened
-num_of_fish_species_threatened
-num_of_mammal_species_threatened
-mortality_rate_due_to_air_pollution_per_100000_male
-mortality_rate_due_to_air_pollution_per_100000_female
-percent_population_exposed_air_pollution_over_who_guideline
-co2_emissions_kt
-co2_emissions_metric_tons_per_capita
-total_ghg_emissions_kt_of_co2_equivalent
-
-
 create table climate(
   climate_key serial primary key,
   country_code text,
@@ -217,7 +199,7 @@ create table climate(
   ),
   annual_freshwater_withdrawals_percent_of_total numeric check (
     annual_freshwater_withdrawals_percent_of_total >= 0
-    and annual_freshwater_withdrawals_percent_of_total <= 100
+    and annual_freshwater_withdrawals_percent_of_total <= 1000
   ),
   droughts_floods_extreme_temp_percent_of_pop numeric check (
     droughts_floods_extreme_temp_percent_of_pop >= 0
