@@ -184,7 +184,7 @@ mortality_rate_due_to_air_pollution_per_100000_male
 mortality_rate_due_to_air_pollution_per_100000_female
 percent_population_exposed_air_pollution_over_who_guideline
 co2_emissions_kt
-co2_emissions_metric_ton_per_capita
+co2_emissions_metric_tons_per_capita
 total_ghg_emissions_kt_of_co2_equivalent
 
 
@@ -251,9 +251,9 @@ create table climate(
     co2_emissions_kt >= 0
     and co2_emissions_kt <= 1000000000
   ),
-  co2_emissions_metric_ton_per_capita numeric check (
-    co2_emissions_metric_ton_per_capita >= 0
-    and co2_emissions_metric_ton_per_capita <= 100
+  co2_emissions_metric_tons_per_capita numeric check (
+    co2_emissions_metric_tons_per_capita >= 0
+    and co2_emissions_metric_tons_per_capita <= 100
   ),
   total_ghg_emissions_kt_of_co2_equivalent bigint check (
     total_ghg_emissions_kt_of_co2_equivalent >= 0
