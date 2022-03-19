@@ -27,12 +27,12 @@ create table event(
     and foreign_aid <= 100000000000
   ),
   start_date date check (
-    start_date >= 0
-    and start_date <= 100000000000000
+    start_date >= '2005-01-01'
+    and start_date <= '2020-12-31'
   ),
-  end_date check (
-    end_date >= 0
-    and end_date <= 100000000000000
+  end_date date check (
+    end_date >= '2005-01-01'
+    and end_date <= '2020-12-31'
   )
 );
 
