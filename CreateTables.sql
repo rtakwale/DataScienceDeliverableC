@@ -1,5 +1,41 @@
 /* Creating the database tables and setting column constraints */
 
+create table event(
+  event_key serial primary key,
+  country_code text,
+  yr integer check (
+    yr >= 2005
+    and yr <= 2020
+  ),
+  event_name text,
+  event_type text,
+  countries_affected text[],
+  num_of_deaths bigint check (
+    num_of_deaths >= 0
+    and num_of_deaths <= 1000000000
+  ),
+  num_of_injuries bigint check (
+    num_of_injuries >= 0
+    and num_of_injuries <= 1000000000
+  ),
+  costs bigint check (
+    costs >= 0
+    and costs <= 100000000000
+  ),
+  foreign_aid bigint check (
+    foreign_aid >= 0
+    and foreign_aid <= 100000000000
+  ),
+  start_date date check (
+    start_date >= 0
+    and start_date <= 100000000000000
+  ),
+  end_date check (
+    end_date >= 0
+    and end_date <= 100000000000000
+  )
+);
+
 create table economy(
   economy_key serial primary key,
   country_code text,
