@@ -266,10 +266,6 @@ create table climate(
     annual_freshwater_withdrawals_percent_of_total >= 0
     and annual_freshwater_withdrawals_percent_of_total <= 1000
   ),
-  droughts_floods_extreme_temp_percent_of_pop numeric check (
-    droughts_floods_extreme_temp_percent_of_pop >= 0
-    and droughts_floods_extreme_temp_percent_of_pop <= 100
-  ),
   num_of_bird_species_threatened integer check (
     num_of_bird_species_threatened >= 0
     and num_of_bird_species_threatened <= 1000
@@ -281,14 +277,6 @@ create table climate(
   num_of_mammal_species_threatened integer check (
     num_of_mammal_species_threatened >= 0
     and num_of_mammal_species_threatened <= 1000
-  ),
-  mortality_rate_due_to_air_pollution_per_100000_male numeric check (
-    mortality_rate_due_to_air_pollution_per_100000_male >= 0
-    and mortality_rate_due_to_air_pollution_per_100000_male <= 1000
-  ),
-  mortality_rate_due_to_air_pollution_per_100000_female numeric check (
-    mortality_rate_due_to_air_pollution_per_100000_female >= 0
-    and mortality_rate_due_to_air_pollution_per_100000_female <= 1000
   ),
   percent_population_exposed_air_pollution_over_who_guideline numeric check (
     percent_population_exposed_air_pollution_over_who_guideline >= 0
