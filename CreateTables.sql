@@ -124,10 +124,6 @@ create table economy(
     income_share_held_by_fourth_20_percent >= 0
     and income_share_held_by_fourth_20_percent <= 100
   ),
-  below_poverty_line_percentage numeric check (
-    below_poverty_line_percentage >= 0
-    and below_poverty_line_percentage <= 100
-  ),
   labor_force_female_percentage numeric check (
     labor_force_female_percentage >= 0
     and labor_force_female_percentage <= 100
