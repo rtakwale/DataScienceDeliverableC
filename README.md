@@ -1,6 +1,6 @@
 # DataScienceDeliverableC
 
-This repo contains all the table creation and modification code for our data mart.
+This repo contains all the table creation and modification/cleaning code for our data mart.
 
 **CreateTables.sql** contains all code related to table creation.
 
